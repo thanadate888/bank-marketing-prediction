@@ -8,7 +8,6 @@ from sklearn.metrics import classification_report
 # Load dataset
 df = pd.read_csv("data/bank-full.csv", sep=";")
 
-# Replace unknown with NaN and drop
 df.replace("unknown", None, inplace=True)
 df.dropna(inplace=True)
 
@@ -40,14 +39,12 @@ ensemble = VotingClassifier(
     voting='hard'
 )
 
-# Train
 ensemble.fit(X_train, y_train)
 
-# Evaluate
 pred = ensemble.predict(X_test)
 print(classification_report(y_test, pred))
 
-# Save model + feature columns
+# Save model + column names
 joblib.dump(ensemble, "ml_model.pkl")
 joblib.dump(X.columns.tolist(), "ml_columns.pkl")
 

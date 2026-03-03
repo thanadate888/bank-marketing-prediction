@@ -1,57 +1,19 @@
-import streamlit as st
-import numpy as np
 import joblib
-import tensorflow as tf
+import pandas as pd
+import numpy as np
 
-st.set_page_config(
-    page_title="Bank Marketing Predictor",
-    page_icon="🏦",
-    layout="centered"
-)
+model = joblib.load("ml_model.pkl")
+columns = joblib.load("ml_columns.pkl")
 
-st.title("🏦 Bank Marketing Prediction System")
-st.markdown("### Machine Learning & Neural Network Demo")
+# สร้าง dictionary เต็มก่อน
+input_dict = dict.fromkeys(columns, 0)
 
-# Sidebar
-model_option = st.sidebar.selectbox(
-    "Select Model",
-    ["Machine Learning", "Neural Network"]
-)
+# ใส่ค่าที่ผู้ใช้กรอก
+input_dict["age"] = age
+input_dict["balance"] = balance
+input_dict["campaign"] = campaign
 
-# Load Models
-if model_option == "Machine Learning":
-    model = joblib.load("ml_model.pkl")
-else:
-    model = tf.keras.models.load_model("nn_model.keras")
+# แปลงเป็น DataFrame
+input_df = pd.DataFrame([input_dict])
 
-# Input Section
-col1, col2 = st.columns(2)
-
-with col1:
-    age = st.number_input("Age", 18, 100, 30)
-
-with col2:
-    balance = st.number_input("Balance", 0.0, 100000.0, 1000.0)
-
-campaign = st.number_input("Campaign Contacts", 1, 50, 3)
-
-# Predict Button
-if st.button("Predict"):
-    input_data = np.array([[age, balance, campaign]])
-
-    if model_option == "Machine Learning":
-        prediction = model.predict(input_data)[0]
-        prob = model.predict_proba(input_data)[0][1]
-    else:
-        prob = model.predict(input_data)[0][0]
-        prediction = 1 if prob > 0.5 else 0
-
-    st.subheader("Prediction Result")
-
-    if prediction == 1:
-        st.success("Client will Subscribe (YES)")
-    else:
-        st.error("Client will NOT Subscribe (NO)")
-
-    st.metric("Confidence", f"{prob*100:.2f}%")
-    st.progress(int(prob*100))
+prediction = model.predict(input_df)[0]
