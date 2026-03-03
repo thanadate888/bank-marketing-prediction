@@ -36,7 +36,7 @@ ensemble = VotingClassifier(
         ('gb', gb),
         ('lr', lr)
     ],
-    voting='hard'
+    voting='soft'
 )
 
 ensemble.fit(X_train, y_train)
