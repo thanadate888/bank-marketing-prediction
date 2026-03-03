@@ -1,0 +1,478 @@
+customer_comment,label
+"I want safe investment for my savings",yes
+"I am not interested in term deposit",no
+"I have stable income and prefer fixed return",yes
+"I don't like locking my money",no
+"Saving for future security",yes
+"I already have many loans",no
+"I prefer low risk banking product",yes
+"Interest rate too low",no
+"My salary is stable and I can save",yes
+"I need liquidity now",no
+"I want safe investmnt",yes
+"",no
+"I dont like deposit",
+"I plan for retirement savings",yes
+"Bank interest unattractive",no
+"I trust this bank",yes
+"I may need my money anytime",no
+"Looking for secure option",yes
+"Not confident about long term saving",no
+"I want guaranteed returns",yes
+"I dont have enough savings",no
+"My financial condition stable",yes
+"Interest not competitive",no
+"I want diversify investment",yes
+"Economic uncertainty worry me",no
+"I prefer secure saving option",yes
+"Facing financial difficulty",no
+"I like predictable return",yes
+"I don't want long commitment",no
+"I have extra cash",yes
+"I need money for business",no
+"Safe banking is important",yes
+"Deposit period long",no
+"I want stable growth",yes
+"Interest not attractive",no
+"I save for children education",yes
+"I cant lock funds",no
+"I like fixed deposit plan",yes
+"Risk too high",no
+"I want guaranteed income",yes
+"My income unstable",no
+"I trust regulated bank",yes
+"I prefer flexible option",no
+"I prepare for emergency",yes
+"I invested elsewhere",no
+"I need steady return",yes
+"No benefit in deposit",no
+"I want financial stability",yes
+"Money needed urgent",no
+"I feel safe with deposit",yes
+"I dislike fixed saving",no
+"I have good credit history",yes
+"My budget tight",no
+"I want secure long term saving",yes
+"I dont trust long commitment",no
+"I like stable interest",yes
+"I need flexible withdrawal",no
+"I prefer safe plan",yes
+"I dont want risk",no
+"I want monthly fixed return",yes
+"Income not consistent",no
+"I want reliable investment",yes
+"I may change job soon",no
+"I save regularly every month",yes
+"I need cash flow freedom",no
+"I want protection for savings",yes
+"I think interest too small",no
+"I like low risk finance",yes
+"I dont have stable job",no
+"I want steady passive income",yes
+"I need emergency fund access",no
+"I prefer safe banking choice",yes
+"I dislike long lock period",no
+"I want fixed income option",yes
+"I not ready to invest",no
+"I want simple saving product",yes
+"I dont understand deposit rule",no
+"I trust bank stability",yes
+"I worry about inflation",no
+"I want long term financial plan",yes
+"I need flexibility",no
+"I like guaranteed plan",yes
+"I afraid to lose money",no
+"I want secure retirement fund",yes
+"I unstable income situation",no
+"I prefer safe savings method",yes
+"I need quick access money",no
+"I want deposit security",yes
+"I dont like low interest",no
+"I want protect my capital",yes
+"I have debt to pay",no
+"I want fixed low risk return",yes
+"I not confident in economy",no
+"I choose secure bank product",yes
+"I cannot afford commitment",no
+"I like safe financial growth",yes
+"I prefer liquid asset",no
+"I want stable saving strategy",yes
+"I have irregular income",no
+"I need reliable bank option",yes
+"I want free cash use",no
+"I prefer predictable banking",yes
+"I not satisfied interest",no
+"I want safety for money",yes
+"I might need funds soon",no
+"I like secure deposit plan",yes
+"I worry about future job",no
+"I want safe interest earning",yes
+"I dont want to commit",no
+"I want stable saving",yes
+"I dont like long period deposit",no
+"I like guaranteed banking return",yes
+"I need short term money",no
+"I want reliable savings",yes
+"I unsure about economy",no
+"I prefer fixed saving product",yes
+"I need flexibility option",no
+"I want capital protection",yes
+"I dont see advantage",no
+"I want low volatility saving",yes
+"I unstable work income",no
+"I like structured saving plan",yes
+"I want high liquidity",no
+"I prefer safe investment tool",yes
+"I dont trust long term contract",no
+"I want consistent return",yes
+"I job not stable",no
+"I like fixed deposit security",yes
+"I need accessible fund",no
+"I want financial safety",yes
+"I not ready long invest",no
+"I want long term secure saving",yes
+"I emergency may happen",no
+"I like stable deposit option",yes
+"I dont want risk product",no
+"I want secure banking service",yes
+"I facing money issue",no
+"I prefer guaranteed saving",yes
+"I might relocate soon",no
+"I want safe future planning",yes
+"I low salary currently",no
+"I like deposit interest stability",yes
+"I cant lock long term",no
+"I want fixed financial growth",yes
+"I uncertain about income",no
+"I choose stable deposit",yes
+"I need flexible money",no
+"I want dependable bank saving",yes
+"I not comfortable deposit",no
+"I prefer safe financial choice",yes
+"I have short term goal",no
+"I want fixed saving income",yes
+"I unstable financial state",no
+"I like guaranteed secure return",yes
+"I dont understand condition",no
+"I want minimal risk option",yes
+"I may need funds anytime",no
+"I prefer low risk deposit",yes
+"I job change soon",no
+"I want safe monthly return",yes
+"I no stable cashflow",no
+"I like secure banking plan",yes
+"I emergency expenses high",no
+"I want stable deposit income",yes
+"I unsure about future",no
+"I prefer reliable deposit product",yes
+"I money tight now",no
+"I want secure wealth growth",yes
+"I dont like fixed lock",no
+"I want financial predictability",yes
+"I unstable monthly income",no
+"I choose secure saving plan",yes
+"I need quick withdrawal",no
+"I want guaranteed financial safety",yes
+"I worried about expenses",no
+"I prefer steady interest rate",yes
+"I cant risk money",no
+"I want long term protection",yes
+"I job situation unclear",no
+"I like consistent deposit earning",yes
+"I need high flexibility",no
+"I want safe investment strategy",yes
+"I unsure about bank policy",no
+"I prefer secure capital plan",yes
+"I have unpredictable income",no
+"I want stable wealth accumulation",yes
+"I need available funds",no
+"I like low risk saving product",yes
+"I not convinced interest rate",no
+"I want reliable future saving",yes
+"I facing short term need",no
+"I prefer fixed income banking",yes
+"I unstable economic condition",no
+"I want deposit reliability",yes
+"I may require money urgent",no
+"I choose secure savings account",yes
+"I no long commitment",no
+"I want safe passive income",yes
+"I unstable employment",no
+"I like safe deposit return",yes
+"I need flexible saving",no
+"I want guaranteed growth",yes
+"I not sure about deposit",no
+"I prefer stable income plan",yes
+"I emergency cost possible",no
+"I want secure banking investment",yes
+"I low confidence economy",no
+"I like fixed deposit earning",yes
+"I might travel soon",no
+"I want long term stability",yes
+"I not ready fixed saving",no
+"I prefer dependable deposit",yes
+"I unstable salary",no
+"I want secure saving future",yes
+"I need quick money access",no
+"I like safe finance option",yes
+"I unsure deposit benefit",no
+"I want predictable savings",yes
+"I facing liquidity issue",no
+"I prefer steady return plan",yes
+"I unstable business income",no
+"I want low risk saving strategy",yes
+"I need financial freedom",no
+"I like capital safety",yes
+"I dont want long freeze money",no
+"I want secure interest income",yes
+"I unstable project income",no
+"I prefer reliable fixed deposit",yes
+"I may lose job",no
+"I want safe asset growth",yes
+"I short term cash need",no
+"I like guaranteed income option",yes
+"I unstable earnings",no
+"I want strong financial base",yes
+"I cannot commit long term",no
+"I prefer stable saving growth",yes
+"I urgent financial need",no
+"I want secure bank saving",yes
+"I unsure about contract",no
+"I like low risk deposit plan",yes
+"I unstable career",no
+"I want consistent financial return",yes
+"I need open liquidity",no
+"I prefer safe income source",yes
+"I worried job future",no
+"I want safe wealth plan",yes
+"I unstable freelance income",no
+"I like guaranteed interest option",yes
+"I short cash currently",no
+"I want long term fixed security",yes
+"I no stable savings",no
+"I prefer dependable saving method",yes
+"I immediate fund need",no
+"I want risk free growth",yes
+"I unstable contract job",no
+"I like secure monthly earning",yes
+"I money flow unstable",no
+"I want stable future income",yes
+"I unsure long commitment",no
+"I prefer safe deposit strategy",yes
+"I short liquidity now",no
+"I want secure long term finance",yes
+"I unstable temporary income",no
+"I like fixed reliable saving",yes
+"I cash requirement high",no
+"I want guaranteed safe return",yes
+"I unstable part time income",no
+"I prefer stable banking return",yes
+"I uncertain economic state",no
+"I want secure income planning",yes
+"I facing urgent bill",no
+"I like safe saving future",yes
+"I unstable consulting income",no
+"I want fixed capital safety",yes
+"I no financial stability",no
+"I prefer reliable banking product",yes
+"I immediate expense ahead",no
+"I want stable deposit protection",yes
+"I unsure deposit risk",no
+"I like secure financial management",yes
+"I unstable startup income",no
+"I want guaranteed secure future",yes
+"I short money supply",no
+"I prefer low risk long saving",yes
+"I unstable temporary job",no
+"I want predictable bank return",yes
+"I liquidity concern",no
+"I like stable finance structure",yes
+"I unstable monthly revenue",no
+"I want secure retirement plan",yes
+"I urgent money need",no
+"I prefer fixed safe deposit",yes
+"I unstable seasonal income",no
+"I want steady saving growth",yes
+"I short emergency fund",no
+"I like guaranteed capital protection",yes
+"I unstable hourly wage",no
+"I want secure long future",yes
+"I no steady earnings",no
+"I prefer dependable financial saving",yes
+"I urgent personal expense",no
+"I want risk free financial plan",yes
+"I unstable sales income",no
+"I like consistent bank interest",yes
+"I facing money pressure",no
+"I want stable fixed earning",yes
+"I unstable variable income",no
+"I prefer reliable secure saving",yes
+"I immediate payment required",no
+"I want secure financial deposit",yes
+"I unstable gig income",no
+"I like safe long saving",yes
+"I facing cash shortage",no
+"I want fixed deposit safety",yes
+"I unstable overtime income",no
+"I prefer stable capital growth",yes
+"I urgent debt payment",no
+"I want secure predictable income",yes
+"I unstable bonus income",no
+"I like guaranteed low risk return",yes
+"I immediate fund requirement",no
+"I want stable long term wealth",yes
+"I unstable income source",no
+"I prefer secure deposit investment",yes
+"I urgent medical bill",no
+"I want safe retirement saving",yes
+"I unstable commission income",no
+"I like reliable deposit earning",yes
+"I facing temporary loss",no
+"I want guaranteed saving safety",yes
+"I unstable job contract",no
+"I prefer fixed secure saving",yes
+"I urgent family expense",no
+"I want predictable low risk income",yes
+"I unstable business profit",no
+"I like stable wealth plan",yes
+"I immediate school fee",no
+"I want safe long term deposit",yes
+"I unstable freelance project",no
+"I prefer dependable saving security",yes
+"I urgent repair cost",no
+"I want fixed stable interest",yes
+"I unstable seasonal job",no
+"I like secure passive income",yes
+"I immediate travel expense",no
+"I want guaranteed future stability",yes
+"I unstable side income",no
+"I prefer stable deposit earning",yes
+"I urgent rent payment",no
+"I want safe financial growth plan",yes
+"I unstable work contract",no
+"I like reliable saving growth",yes
+"I immediate cash needed",no
+"I want secure fixed income source",yes
+"I unstable part time job",no
+"I prefer predictable saving income",yes
+"I urgent unexpected cost",no
+"I want safe wealth accumulation",yes
+"I unstable irregular salary",no
+"I like consistent deposit security",yes
+"I immediate bill payment",no
+"I want stable guaranteed income",yes
+"I unstable consulting revenue",no
+"I prefer secure banking saving",yes
+"I urgent cash requirement",no
+"I want long term risk free saving",yes
+"I unstable temporary earnings",no
+"I like safe deposit planning",yes
+"I immediate loan payment",no
+"I want fixed income reliability",yes
+"I unstable periodic income",no
+"I prefer stable wealth security",yes
+"I urgent utility bill",no
+"I want secure long saving strategy",yes
+"I unstable unpredictable income",no
+"I like guaranteed saving return",yes
+"I immediate household expense",no
+"I want predictable fixed deposit",yes
+"I unstable side business income",no
+"I prefer secure retirement saving",yes
+"I urgent cashflow issue",no
+"I want stable investment return",yes
+"I unstable project based income",no
+"I like safe consistent earning",yes
+"I immediate unexpected bill",no
+"I want guaranteed secure capital",yes
+"I unstable commission based income",no
+"I prefer dependable deposit growth",yes
+"I urgent financial obligation",no
+"I want risk free capital protection",yes
+"I unstable freelance earning",no
+"I like stable reliable saving",yes
+"I immediate short term need",no
+"I want secure predictable wealth",yes
+"I unstable business cashflow",no
+"I prefer fixed low risk income",yes
+"I urgent fund requirement",no
+"I want safe long deposit plan",yes
+"I unstable salary fluctuation",no
+"I like guaranteed deposit plan",yes
+"I immediate expense burden",no
+"I want stable secure income future",yes
+"I unstable earning pattern",no
+"I prefer reliable financial planning",yes
+"I urgent temporary need",no
+"I want fixed predictable saving",yes
+"I unstable variable earnings",no
+"I like secure interest earning",yes
+"I immediate liquidity problem",no
+"I want safe stable financial plan",yes
+"I unstable contract income",no
+"I prefer dependable retirement plan",yes
+"I urgent personal bill",no
+"I want long term secure wealth",yes
+"I unstable short term income",no
+"I like fixed stable deposit",yes
+"I immediate family expense",no
+"I want guaranteed safe capital",yes
+"I unstable work income pattern",no
+"I prefer stable secure saving",yes
+"I urgent expense payment",no
+"I want predictable financial growth",yes
+"I unstable irregular earnings",no
+"I like reliable deposit stability",yes
+"I immediate fund shortage",no
+"I want secure safe future income",yes
+"I unstable inconsistent salary",no
+"I prefer low risk stable saving",yes
+"I urgent emergency cost",no
+"I want fixed secure wealth plan",yes
+"I unstable non permanent income",no
+"I like safe steady saving",yes
+"I immediate money need",no
+"I want stable capital preservation",yes
+"I unstable earning capacity",no
+"I prefer guaranteed secure deposit",yes
+"I urgent cash payment",no
+"I want predictable secure income",yes
+"I unstable revenue source",no
+"I like consistent safe return",yes
+"I immediate financial shortage",no
+"I want secure reliable deposit",yes
+"I unstable income stream",no
+"I prefer stable safe banking",yes
+"I urgent unexpected expense",no
+"I want guaranteed stable wealth",yes
+"I unstable financial income",no
+"I like fixed deposit stability",yes
+"I immediate urgent need",no
+"I want safe secure saving future",yes
+"I unstable monthly earnings",no
+"I prefer predictable stable saving",yes
+"I urgent financial problem",no
+"I want secure long term capital",yes
+"I unstable income situation",no
+"I like dependable saving option",yes
+"I immediate shortfall",no
+"I want fixed safe income source",yes
+"I unstable earning structure",no
+"I prefer secure steady return",yes
+"I urgent payment need",no
+"I want stable guaranteed deposit",yes
+"I unstable inconsistent income",no
+"I like reliable fixed saving",yes
+"I immediate cash deficit",no
+"I want safe stable wealth growth",yes
+"I unstable income variation",no
+"I prefer predictable safe deposit",yes
+"I urgent bill obligation",no
+"I want secure consistent income",yes
+"I unstable financial earnings",no
+"I like steady deposit return",yes
+"I immediate urgent bill",no
+"I want guaranteed reliable saving",yes
+"I unstable earning fluctuation",no
+"I prefer stable low risk deposit",yes
+"I urgent money issue",no
