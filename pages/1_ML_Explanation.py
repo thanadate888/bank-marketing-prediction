@@ -53,3 +53,18 @@ It combines:
 
 Soft Voting averages probabilities from each model to improve prediction accuracy.
 """)
+st.header("Model Theory")
+
+st.markdown("""
+### Random Forest
+Ensemble of decision trees using bagging technique.
+
+### Gradient Boosting
+Sequential ensemble technique reducing residual errors.
+
+### Logistic Regression
+Linear model for binary classification using sigmoid function.
+
+### Soft Voting
+Averages prediction probabilities from all base models.
+""")

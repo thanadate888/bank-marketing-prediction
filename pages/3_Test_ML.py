@@ -1,46 +1,79 @@
 import streamlit as st
-import joblib
 import pandas as pd
+import joblib
 
-st.title("🧪 Test Machine Learning Model")
+# ----------------------------
+# Page Config
+# ----------------------------
+st.set_page_config(page_title="Test ML Model", layout="wide")
 
-# Input fields
-age = st.number_input("Age", 18, 100, 30)
-balance = st.number_input("Balance", 0.0, 100000.0, 1000.0)
-campaign = st.number_input("Campaign Contacts", 1, 50, 3)
+st.title("🧠 Machine Learning Prediction")
 
-model = joblib.load("ml_model.pkl")
-columns = joblib.load("ml_columns.pkl")
+# ----------------------------
+# Load Model
+# ----------------------------
+@st.cache_resource
+def load_model():
+    model = joblib.load("ml_model.pkl")
+    columns = joblib.load("ml_columns.pkl")
+    return model, columns
 
-if st.button("Predict ML"):
+model, model_columns = load_model()
 
-    input_dict = dict.fromkeys(columns, 0)
+# ----------------------------
+# Input Form
+# ----------------------------
+st.subheader("Enter Customer Information")
 
-    input_dict["age"] = age
-    input_dict["balance"] = balance
-    input_dict["campaign"] = campaign
+col1, col2 = st.columns(2)
 
-    input_df = pd.DataFrame([input_dict])
+with col1:
+    age = st.number_input("Age", min_value=18, max_value=100, value=30)
+    balance = st.number_input("Balance", value=1000)
+    duration = st.number_input("Call Duration (seconds)", value=100)
 
-    prediction = model.predict(input_df)[0]
-    probability = model.predict_proba(input_df)[0]
+with col2:
+    campaign = st.number_input("Campaign Contacts", value=1)
+    previous = st.number_input("Previous Contacts", value=0)
 
-    prob_no = probability[0] * 100
-    prob_yes = probability[1] * 100
+# ----------------------------
+# Prediction Button
+# ----------------------------
+if st.button("Predict"):
 
-    st.subheader("Result")
+    # Create dataframe from input
+    input_data = pd.DataFrame([{
+        "age": age,
+        "balance": balance,
+        "duration": duration,
+        "campaign": campaign,
+        "previous": previous
+    }])
 
+    # Ensure columns match training
+    input_data = input_data.reindex(columns=model_columns, fill_value=0)
+
+    # Predict
+    prediction = model.predict(input_data)[0]
+    probability = model.predict_proba(input_data)[0]
+
+    st.divider()
+
+    # ----------------------------
+    # Show Result
+    # ----------------------------
     if prediction == 1:
-        st.success("Client will Subscribe (YES)")
+        st.success("Prediction: Customer WILL Subscribe")
     else:
-        st.error("Client will NOT Subscribe (NO)")
+        st.error("Prediction: Customer will NOT Subscribe")
 
-    st.write(f"Subscribe Probability: {prob_yes:.2f}%")
-    st.progress(int(prob_yes))
-
-    chart_df = pd.DataFrame({
-        "Outcome": ["Not Subscribe", "Subscribe"],
-        "Probability (%)": [prob_no, prob_yes]
+    # ----------------------------
+    # Probability Chart
+    # ----------------------------
+    prob_df = pd.DataFrame({
+        "Class": ["No", "Yes"],
+        "Probability": probability
     })
 
-    st.bar_chart(chart_df.set_index("Outcome"))
+    st.subheader("Prediction Probability")
+    st.bar_chart(prob_df.set_index("Class"), use_container_width=True)

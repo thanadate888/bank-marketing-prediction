@@ -37,3 +37,15 @@ st.write("""
 Neural Networks are powerful for capturing complex relationships in data,
 especially unstructured data such as text.
 """)
+st.header("Neural Network Architecture Details")
+
+st.markdown("""
+Input Layer → Dense Layer (ReLU) → Dense Layer (ReLU) → Output Layer (Sigmoid)
+
+Loss Function: Binary Crossentropy  
+Optimizer: Adam  
+Metric: Accuracy  
+
+Neural Networks capture non-linear relationships effectively,
+especially in text classification tasks.
+""")
