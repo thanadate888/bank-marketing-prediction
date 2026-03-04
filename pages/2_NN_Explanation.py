@@ -1,51 +1,62 @@
 import streamlit as st
 
-st.title("🧠 Neural Network Model Explanation")
+st.set_page_config(page_title="คำอธิบาย Neural Network", layout="wide")
 
-st.header("1. Dataset Type")
+st.title("🧠 คำอธิบายโมเดล Neural Network")
 
-st.write("""
-This model uses Unstructured Data (Text Data).
-Text data was transformed into numerical format using TF-IDF Vectorization.
+st.header("1️⃣ ลักษณะของปัญหา")
+
+st.markdown("""
+เป็นปัญหาการจำแนกข้อความ (Text Classification)
+เพื่อทำนายว่าข้อความของลูกค้ามีแนวโน้มสมัครผลิตภัณฑ์หรือไม่
 """)
 
-st.header("2. Data Preparation")
+st.header("2️⃣ การเตรียมข้อมูลข้อความ")
 
-st.write("""
-1. Text cleaning
-2. Tokenization
-3. TF-IDF Vectorization
-4. Train/Test split
+st.markdown("""
+ใช้เทคนิค TF-IDF (Term Frequency - Inverse Document Frequency)
+
+เพื่อแปลงข้อความให้เป็นตัวเลข
+โดยคำนวณความสำคัญของคำแต่ละคำในเอกสาร
 """)
 
-st.header("3. Neural Network Architecture")
+st.header("3️⃣ โครงสร้างของ Neural Network")
 
-st.write("""
-The Neural Network was designed with:
-- Input Layer
-- Hidden Dense Layers (ReLU activation)
-- Output Layer (Sigmoid activation)
+st.markdown("""
+โครงสร้างของโมเดลประกอบด้วย:
+
+Input Layer  
+→ Hidden Layer (ReLU)  
+→ Hidden Layer (ReLU)  
+→ Output Layer (Sigmoid)
 
 Loss Function: Binary Crossentropy  
 Optimizer: Adam  
 Evaluation Metric: Accuracy
 """)
 
-st.header("4. Why Neural Network?")
-
-st.write("""
-Neural Networks are powerful for capturing complex relationships in data,
-especially unstructured data such as text.
-""")
-st.header("Neural Network Architecture Details")
+st.header("4️⃣ เหตุผลที่เลือกใช้ Neural Network")
 
 st.markdown("""
-Input Layer → Dense Layer (ReLU) → Dense Layer (ReLU) → Output Layer (Sigmoid)
-
-Loss Function: Binary Crossentropy  
-Optimizer: Adam  
-Metric: Accuracy  
-
-Neural Networks capture non-linear relationships effectively,
-especially in text classification tasks.
+Neural Network เหมาะสำหรับ:
+- ข้อมูลที่มีความสัมพันธ์แบบไม่เป็นเชิงเส้น (Non-linear)
+- ข้อมูลที่มีมิติสูง เช่น ข้อความ
+- การเรียนรู้รูปแบบที่ซับซ้อน
 """)
+
+st.header("5️⃣ ฟังก์ชันกระตุ้น (Activation Function)")
+
+st.subheader("ReLU")
+st.markdown("""
+ช่วยให้โมเดลเรียนรู้ความสัมพันธ์ที่ไม่เป็นเชิงเส้น
+และลดปัญหา Vanishing Gradient
+""")
+
+st.subheader("Sigmoid")
+st.markdown("""
+แปลงค่าออกมาเป็นความน่าจะเป็นระหว่าง 0 ถึง 1
+เหมาะกับปัญหา Binary Classification
+""")
+
+st.markdown("---")
+st.info("โครงงานนี้แสดงการประยุกต์ใช้ Deep Learning สำหรับการวิเคราะห์ข้อความ พร้อมการนำไปใช้งานผ่านเว็บแอปพลิเคชัน")

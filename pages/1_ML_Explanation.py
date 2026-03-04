@@ -1,70 +1,79 @@
 import streamlit as st
 
-st.title("📊 Machine Learning Model Explanation")
+st.set_page_config(page_title="คำอธิบาย Machine Learning", layout="wide")
 
-st.header("1. Dataset Source")
+st.title("📊 คำอธิบายโมเดล Machine Learning")
 
-st.write("""
-Dataset: Bank Marketing Dataset  
-Source: UCI Machine Learning Repository  
-https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
-""")
-
-st.header("2. Dataset Description")
-
-st.write("""
-This dataset contains customer information collected from a bank marketing campaign.
-The goal is to predict whether a client will subscribe to a term deposit.
-""")
-
-st.header("3. Important Features")
-
-st.write("""
-- age: Age of client  
-- job: Type of job  
-- marital: Marital status  
-- education: Education level  
-- balance: Account balance  
-- housing: Has housing loan or not  
-- loan: Has personal loan or not  
-- campaign: Number of contacts performed during this campaign  
-- y: Target variable (yes/no)
-""")
-
-st.header("4. Data Preparation")
-
-st.write("""
-Steps performed:
-1. Replaced 'unknown' with missing values
-2. Removed rows with missing values
-3. Converted target variable into numeric format
-4. Applied One-hot Encoding for categorical features
-5. Split data into Train (80%) and Test (20%)
-""")
-
-st.header("5. Ensemble Model")
-
-st.write("""
-The model is an Ensemble Learning approach using VotingClassifier (Soft Voting).
-It combines:
-- Random Forest
-- Gradient Boosting
-- Logistic Regression
-
-Soft Voting averages probabilities from each model to improve prediction accuracy.
-""")
-st.header("Model Theory")
+st.header("1️⃣ ภาพรวมของปัญหา")
 
 st.markdown("""
-### Random Forest
-Ensemble of decision trees using bagging technique.
+โครงงานนี้เป็นปัญหา **Binary Classification (การจำแนกแบบสองคลาส)**  
+เพื่อทำนายว่า ลูกค้าจะสมัครผลิตภัณฑ์เงินฝากประจำหรือไม่
 
-### Gradient Boosting
-Sequential ensemble technique reducing residual errors.
-
-### Logistic Regression
-Linear model for binary classification using sigmoid function.
-
-### Soft Voting
-Averages prediction probabilities from all base models.
+ผลลัพธ์มี 2 ค่า:
+- 0 = ไม่สมัคร
+- 1 = สมัคร
 """)
+
+st.header("2️⃣ ชุดข้อมูล (Dataset)")
+
+st.markdown("""
+ใช้ชุดข้อมูล Bank Marketing Dataset
+
+ตัวอย่างตัวแปรที่ใช้ เช่น:
+- อายุ (age)
+- ยอดเงินคงเหลือ (balance)
+- จำนวนครั้งที่ติดต่อ (campaign)
+- ระยะเวลาการโทร (duration)
+- จำนวนครั้งที่เคยติดต่อก่อนหน้า (previous)
+
+ตัวแปรเป้าหมาย (Target Variable):
+- y (yes / no)
+""")
+
+st.header("3️⃣ โมเดลที่ใช้ (Ensemble Learning)")
+
+st.subheader("🔹 Logistic Regression")
+st.markdown("""
+โมเดลเชิงเส้นที่ใช้ฟังก์ชัน Sigmoid
+เพื่อคำนวณความน่าจะเป็นของการเกิดเหตุการณ์แบบสองกลุ่ม
+""")
+
+st.subheader("🔹 Random Forest")
+st.markdown("""
+เป็นโมเดลที่รวมต้นไม้ตัดสินใจหลายต้น (Decision Trees)
+โดยใช้เทคนิค Bagging
+ช่วยลดปัญหา Overfitting และเพิ่มความแม่นยำ
+""")
+
+st.subheader("🔹 Gradient Boosting")
+st.markdown("""
+เป็นเทคนิค Boosting
+ที่สร้างโมเดลทีละตัวเพื่อแก้ไขข้อผิดพลาดของโมเดลก่อนหน้า
+ช่วยเพิ่มประสิทธิภาพในการพยากรณ์
+""")
+
+st.subheader("🔹 Soft Voting (Ensemble)")
+st.markdown("""
+นำผลความน่าจะเป็นจากทุกโมเดลมาหาค่าเฉลี่ย
+แล้วตัดสินผลลัพธ์สุดท้ายจากค่าที่ได้
+
+ข้อดี:
+- เพิ่มความแม่นยำ
+- ลดความผันผวนของโมเดลเดี่ยว
+- ทำให้โมเดลมีความเสถียรมากขึ้น
+""")
+
+st.header("4️⃣ เหตุผลที่เลือกใช้ Ensemble")
+
+st.markdown("""
+เนื่องจากแต่ละโมเดลมีจุดแข็งแตกต่างกัน  
+การรวมหลายโมเดลเข้าด้วยกันช่วยให้:
+
+- ลดความผิดพลาด (Error)
+- ลด Overfitting
+- เพิ่มความแม่นยำโดยรวมของระบบ
+""")
+
+st.markdown("---")
+st.info("โครงงานนี้แสดงการประยุกต์ใช้ Machine Learning ในงานธุรกิจจริง พร้อมการพัฒนาเว็บแอปพลิเคชันด้วย Streamlit")
