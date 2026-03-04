@@ -1,44 +1,55 @@
 import streamlit as st
-import joblib
+import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
+import joblib
 
-st.title("🧠 Test Neural Network Model")
+# ----------------------------
+# Page Config
+# ----------------------------
+st.set_page_config(page_title="Test Neural Network", layout="wide")
 
+st.title("🤖 Neural Network Prediction")
+
+# ----------------------------
+# Load Model
+# ----------------------------
 @st.cache_resource
-def load_nn():
+def load_nn_model():
     model = load_model("nn_model.h5")
     vectorizer = joblib.load("tfidf_vectorizer.pkl")
     return model, vectorizer
 
-nn_model, vectorizer = load_nn()
+model, vectorizer = load_nn_model()
 
-text_input = st.text_area("Enter customer comment")
+# ----------------------------
+# Text Input
+# ----------------------------
+st.subheader("Enter Customer Text")
 
-if st.button("Predict Text"):
+user_input = st.text_area("Customer Message")
 
-    if text_input.strip() == "":
-        st.warning("Please enter text")
+if st.button("Predict") and user_input:
+
+    # Transform text
+    input_vector = vectorizer.transform([user_input]).toarray()
+
+    # Predict
+    prediction = model.predict(input_vector)[0][0]
+
+    st.divider()
+
+    # Result
+    if prediction > 0.5:
+        st.success("Prediction: Positive Response")
     else:
-        transformed = vectorizer.transform([text_input])
-        prediction = nn_model.predict(transformed)[0][0]
+        st.error("Prediction: Negative Response")
 
-        prob_positive = prediction
-        prob_negative = 1 - prediction
+    # Probability Chart
+    prob_df = pd.DataFrame({
+        "Class": ["Negative", "Positive"],
+        "Probability": [1 - prediction, prediction]
+    })
 
-        st.subheader("Prediction Result")
-
-        if prob_positive > 0.5:
-            st.success("Positive / Subscribe Intent")
-        else:
-            st.error("Negative / No Subscribe Intent")
-
-        fig, ax = plt.subplots()
-        ax.bar(["Negative", "Positive"],
-               [prob_negative*100, prob_positive*100])
-        ax.set_ylabel("Probability (%)")
-        st.pyplot(fig)
-
-        st.metric("Positive Probability",
-                  f"{prob_positive*100:.2f}%")
+    st.subheader("Prediction Probability")
+    st.bar_chart(prob_df.set_index("Class"), use_container_width=True)
