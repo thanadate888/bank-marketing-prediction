@@ -60,3 +60,30 @@ st.markdown("""
 
 st.markdown("---")
 st.info("โครงงานนี้แสดงการประยุกต์ใช้ Deep Learning สำหรับการวิเคราะห์ข้อความ พร้อมการนำไปใช้งานผ่านเว็บแอปพลิเคชัน")
+st.header("6️⃣ วิธีการใช้งานโมเดลในระบบ")
+
+st.markdown("""
+ขั้นตอนการทำงานของโมเดล Neural Network มีดังนี้:
+
+1️⃣ ผู้ใช้กรอกข้อความของลูกค้า
+
+2️⃣ ระบบจะทำการแปลงข้อความเป็นตัวเลข
+โดยใช้ TF-IDF Vectorizer
+
+3️⃣ ข้อมูลตัวเลขจะถูกส่งเข้า Neural Network
+
+4️⃣ โมเดลจะคำนวณความน่าจะเป็นด้วย Sigmoid
+ซึ่งให้ค่าอยู่ระหว่าง 0 ถึง 1
+
+5️⃣ แสดงผล:
+- ผลการจำแนก (Positive / Negative)
+- ค่าความน่าจะเป็น (%)
+- กราฟแสดงผลลัพธ์
+""")
+
+st.subheader("ตัวอย่างการเรียกใช้งานในโค้ด")
+
+st.code("""
+vector = vectorizer.transform([text]).toarray()
+prediction = model.predict(vector)
+""", language="python")
